@@ -1,0 +1,40 @@
+"parser": "@typescript-eslint/parser",
+"extends": [
+  "next/core-web-vitals",
+  "plugin:@typescript-eslint/recommended",
+  "plugin:prettier/recommended"
+],
+"rules": {
+  "@typescript-eslint/no-explicit-any": "off",
+  "@typescript-eslint/no-unused-vars": [
+    "error",
+    {
+      "argsIgnorePattern": "^_",
+      "destructuredArrayIgnorePattern": "^_"
+    }
+  ],
+  "@typescript-eslint/no-non-null-assertion": "off",
+  "@typescript-eslint/ban-ts-comment": "off",
+  "no-unused-vars": "off",
+  "react/display-name": "off",
+  "react-hooks/exhaustive-deps": "off",
+  "@next/next/no-img-element": "off",
+  "object-shorthand": "error",
+  "react/self-closing-comp": "error",
+  "import/no-anonymous-default-export": "off",
+  "no-param-reassign": "warn",
+  "no-console": [
+    "warn",
+    {
+      "allow": ["warn", "error"]
+    }
+  ],
+  "import/order": [
+    "warn",
+    {
+      "groups": ["external", "internal", "parent", "sibling", "index"],
+      "newlines-between": "always"
+    }
+  ]
+}
+}

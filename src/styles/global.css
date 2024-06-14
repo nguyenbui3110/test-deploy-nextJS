@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Lexend', sans-serif;
+}
+
+@layer utilities {
+  .loader {
+    width: 5em;
+    height: 5em;
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+  }
+
+  .loader::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+  }
+  /* Tùy chỉnh thanh cuộn */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px; /* Độ rộng của thanh cuộn */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent; /* Màu nền của thanh cuộn */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #cbd5e0; /* Màu của thanh cuộn */
+    border-radius: 10px; /* Bo góc của thanh cuộn */
+    border: 2px solid transparent; /* Viền của thanh cuộn */
+    background-clip: content-box; /* Giúp thanh cuộn nhìn gọn hơn */
+  }
+
+  /* Ẩn thanh cuộn mặc định */
+
+
+
+  /* Hiển thị thanh cuộn khi hover */
+  .hover\:overflow-y-auto:hover {
+    scrollbar-width: auto; /* Firefox */
+  }
+
+  .hover\:overflow-y-auto:hover::-webkit-scrollbar {
+    display: block; /* Safari and Chrome */
+  }
+}
